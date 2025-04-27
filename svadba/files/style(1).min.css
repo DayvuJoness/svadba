@@ -537,7 +537,7 @@ a {
     object-fit: cover;
 }
 .sm-main__img__wrapper:first-child .sm-main__img__text img {
-    width: 312px;
+    width: 200px;
 }
 .sm-main__img__wrapper:last-child .sm-main__img__text img {
     width: 180px;
