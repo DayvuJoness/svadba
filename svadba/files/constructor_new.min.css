@@ -1,0 +1,3496 @@
+@keyframes jiggle1 {
+    0% {
+        transform: rotate(-1deg);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: rotate(1.5deg);
+        animation-timing-function: ease-out;
+    }
+}@keyframes jiggle2 {
+     0% {
+         transform: rotate(1deg);
+         animation-timing-function: ease-in;
+     }
+     50% {
+         transform: rotate(-1.5deg);
+         animation-timing-function: ease-out;
+     }
+ }html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%}
+body, html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+iframe, input {
+    all: unset;
+}
+[hidden], template {
+    display: none;
+}
+a {
+    background: 0 0;
+}
+a:active, a:hover {
+    outline: 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: 700;
+}
+dfn {
+    font-style: italic;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+small {
+    font-size: 80%}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -.5em;
+}
+sub {
+    bottom: -.25em;
+}
+img {
+    border: 0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 1em 40px;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+pre {
+    overflow: auto;
+}
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button {
+    overflow: visible;
+}
+button, select {
+    text-transform: none;
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+input {
+    line-height: normal;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+}
+legend {
+    border: 0;
+}
+textarea {
+    overflow: auto;
+}
+optgroup {
+    font-weight: 700;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+legend, td, th {
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBoldItalic.eot);
+    src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBoldItalic.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBoldItalic.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBoldItalic.ttf)format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-LightItalic.eot);
+    src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-LightItalic.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-LightItalic.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-LightItalic.ttf)format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-Bold.eot);
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Bold.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Bold.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Bold.ttf)format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBoldItalic.eot);
+    src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBoldItalic.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBoldItalic.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBoldItalic.ttf)format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-Light.eot);
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Light.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Light.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Light.ttf)format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-Italic.eot);
+    src: local("Open Sans Italic"), local("OpenSans-Italic"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Italic.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Italic.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Italic.ttf)format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-Regular.eot);
+    src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Regular.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Regular.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-Regular.ttf)format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBold.eot);
+    src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBold.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBold.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-SemiBold.ttf)format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBold.eot);
+    src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBold.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBold.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-ExtraBold.ttf)format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://wedwed.ru/sitemaker/fonts/OpenSans-BoldItalic.eot);
+    src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-BoldItalic.eot?#iefix)format("embedded-opentype"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-BoldItalic.woff)format("woff"), url(https://wedwed.ru/sitemaker/fonts/OpenSans-BoldItalic.ttf)format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+:root {
+    --ct-black: #1B1B1B;
+    --ct-text-color: #383737;
+    --ct-placeholder-color: #858C95;
+    --ct-disabled-color: #E5E5E7;
+    --ct-pink-color: #FF416C;
+    --ct-error-color: #C8322B;
+    --ct-success-color: #5DFFB6;
+    --ct-gray-color: #f9f9f9;
+    --ct-gradient: linear-gradient(90deg,  #FF416C 0%,  #FC927B 100%);
+    --ct-margin-60: 60px;
+    --ct-margin-32: 32px;
+    --ct-margin-24: 24px;
+    --ct-margin-16: 16px;
+    --ct-margin-8: 8px;
+    --ct-border-radius-12: 12px;
+    --ct-fs-38: 38px;
+    --ct-fs-32: 32px;
+    --ct-fs-24: 24px;
+    --ct-fs-18: 18px;
+    --ct-fs-16: 16px;
+    --ct-fs-14: 14px;
+    --ct-margin-60: 30px;
+    --ct-margin-32: 26px;
+    --ct-margin-24: 20px;
+    --ct-margin-16: 12px;
+    --ct-margin-8: 6px;
+    --ct-border-radius-12: 10px;
+    --ct-fs-38: 32px;
+    --ct-fs-32: 28px;
+    --ct-fs-24: 20px;
+    --ct-fs-18: 16px;
+    --ct-fs-16: 14px;
+    --ct-fs-14: 12px;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--ct-fs-16);
+}
+::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--ct-pink-color);
+    border-radius: 6px;
+    border: 0;
+}
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background-color: transparent;
+}
+.ct-wrapper a {
+    text-decoration: none;
+}
+.ct-input_wrapper.ct-success .ct-input {
+    border-color: var(--ct-success-color);
+    box-shadow: 0 0 0 3px rgba(93, 255, 182, .2);
+}
+.ct-input_wrapper.ct-error .ct-input_hint, .ct-input_wrapper.ct-error .ct-input_label {
+    color: var(--ct-error-color);
+}
+.ct-input_wrapper.ct-error .ct-input {
+    border-color: var(--ct-error-color);
+}
+.ct-input_wrapper~.ct-input_wrapper {
+    margin-top: var(--ct-margin-32);
+}
+.ct-input_wrapper .ct-input_label {
+    margin-bottom: 8px;
+    display: block;
+}
+.ct-input_wrapper-half {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.ct-input {
+    display: flex;
+    padding: 14px 14px 14px var(--ct-margin-16);
+    align-items: center;
+    gap: var(--ct-margin-8);
+    align-self: stretch;
+    border-radius: var(--ct-border-radius-12);
+    background: var(--ct-gray-color);
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--ct-gray-color);
+}
+select.ct-input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.ct-input_select-wrapper:after, .ct-input_select:after, select.ct-input:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-chevron.svg)50% 50%no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 16px;
+    transform: translateY(-50%);
+    display: block;
+}
+.ct-input_select:after, select.ct-input:after {
+    top: 50%}
+.ct-input_select-wrapper {
+    position: relative;
+}
+.ct-input_select-wrapper:after {
+    bottom: 3px;
+    pointer-events: none;
+}
+.ct-input::placeholder {
+    color: var(--ct-placeholder-color);
+}
+.ct-input[disabled], .ct-input_hint {
+    color: var(--ct-placeholder-color);
+}
+.ct-input_hint {
+    font-size: var(--ct-fs-14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.ct-input_select {
+    position: relative;
+    flex-wrap: wrap;
+}
+.ct-input_select span {
+    width: 100%}
+.ct-input_select ul {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    left: 0;
+    z-index: 3;
+    margin-top: 10px;
+    border-radius: 12px;
+    background: var(--ct-disabled-color);
+    overflow: hidden;
+    height: 0;
+    transition: .2s;
+}
+.ct-input_select-top ul {
+    top: initial;
+    bottom: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.ct-input_select.active ul {
+    height: fit-content;
+    max-height: 300px;
+    overflow: auto;
+}
+.ct-input_select ul li {
+    padding: 16px;
+    margin: 0;
+}
+.ct-input_select ul li:hover {
+    background: rgba(10, 10, 10, .15);
+}
+.ct-input_select-current {
+    display: none;
+}
+.ct-button, .ct-menu_wrapper>ul li {
+    display: flex;
+    justify-content: center;
+}
+.ct-button {
+    padding: 18px 38px;
+    background: var(--ct-gradient);
+    border-radius: 10px;
+    color: #fff;
+    width: fit-content;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.ct-button_secondary {
+    background: #fff;
+    border: 1px solid var(--ct-text-color);
+    color: var(--ct-text-color);
+}
+.ct-button_secondary-alt {
+    border: 1px solid var(--ct-pink-color);
+    color: var(--ct-pink-color);
+}
+.ct-button_ask:before {
+    width: 25px;
+    height: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-help.svg)50% 50%no-repeat;
+    content: ""}
+.ct-button_save:before {
+    width: 25px;
+    height: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-save.svg)50% 50%no-repeat;
+    content: ""}
+.ct-button_full, .ct-menu_wrapper ul.ct-sections_setup li span {
+    width: 100%}
+.ct-menu_wrapper {
+    border-top: 1px solid var(--ct-disabled-color);
+    border-bottom: 1px solid var(--ct-disabled-color);
+    padding: var(--ct-margin-32)0;
+    margin-top: var(--ct-margin-32);
+    margin-bottom: auto;
+}
+.ct-menu li, .ct-switcher {
+    cursor: pointer;
+}
+.ct-menu_wrapper>ul {
+    margin: 0;
+    padding: 0;
+}
+.ct-menu_wrapper>ul li {
+    margin: 0;
+    gap: 10px;
+    align-self: stretch;
+    color: var(--ct-black);
+    text-align: left;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.ct-menu_wrapper ul.ct-menu li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: var(--ct-fs-24);
+    padding: 12px 24px 12px 0;
+}
+.ct-menu_wrapper ul.ct-sections_setup li {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px 8px 0;
+    font-size: var(--ct-fs-18);
+    cursor: pointer;
+}
+.ct-menu_wrapper~.ct-input_wrapper {
+    margin-top: var(--ct-margin-32);
+}
+.ct-menu_wrapper ul.ct-menu li:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    width: 24px;
+    height: 24px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-arrow.svg)50% 50%no-repeat;
+    content: ""}
+.ct-switcher {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.ct-switcher input[type=checkbox] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.ct-switcher input[type=checkbox]+label {
+    width: 45px;
+    min-height: 21px;
+    border-radius: 16px;
+    padding: 2px;
+    background: var(--ct-disabled-color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: .2s;
+}
+.ct-switcher input[type=checkbox]+label:before {
+    width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 1.029px 3.086px 0 rgba(16, 24, 40, .1), 0 1.029px 2.057px -1.029px rgba(16, 24, 40, .1);
+    content: ""}
+.ct-switcher input[type=checkbox]:checked+label {
+    background: var(--ct-pink-color);
+    justify-content: end;
+}
+.ct-switcher input[type=checkbox]:checked+label:before {
+    box-shadow: 0 1.029px 3.086px 0 rgba(16, 24, 40, .1), 0 1.029px 2.057px -1.029px rgba(16, 24, 40, .1);
+}
+.ct-switcher.ct-switcher_smallest input[type=checkbox]+label {
+    width: 19px;
+    min-height: 11px;
+}
+.ct-switcher_smallest input[type=checkbox]+label:before {
+    width: 8px;
+    height: 8px;
+}
+.ct-switcher.ct-switcher_small input[type=checkbox]+label {
+    width: 35px;
+    min-width: 17px;
+}
+.ct-switcher.ct-switcher_small input[type=checkbox]+label:before {
+    width: 17px;
+    height: 17px;
+}
+.ct-device_switcher {
+    display: flex;
+    border: 1px solid #e6e6e6;
+    border-radius: 16px;
+    width: 348px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .05);
+    position: absolute;
+    right: 50px;
+    bottom: var(--ct-margin-60);
+    overflow: hidden;
+    cursor: pointer;
+}
+.ct-device_switcher:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+.ct-device_switcher input[type=radio]+label {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 0;
+    width: 50%;
+    color: var(--ct-pink-color);
+    justify-content: center;
+    position: relative;
+    transition: .2s;
+    z-index: 3;
+}
+.ct-device_switcher input[type=radio]:not(:checked)+label {
+    filter: grayscale(1) brightness(130%);
+}
+.ct-device_switcher input[type=radio]:checked+label:after {
+    width: 100%;
+    content: "";
+    position: absolute;
+    background: #fff8fa;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+#switcher-d1+label:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-desk.svg)50% 50%no-repeat;
+}
+#switcher-d2+label:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-smart.svg)50% 50%no-repeat;
+}
+.ct-examples_toggle:before {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-wand.svg)50% 50%no-repeat;
+    content: ""}
+.ct-examples_toggle {
+    border-radius: 10px;
+    border: 1px solid #ff416c;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    margin-top: 12px;
+    gap: 10px;
+}
+.ct-setup {
+    position: absolute;
+    background: #00000087;
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    border-radius: 12px;
+    top: 20px;
+    right: 50px;
+    color: #fff;
+    cursor: pointer;
+    width: 180px;
+    justify-content: space-between;
+}
+.ct-setup:after {
+    content: "";
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-setup.svg?v=1)50% 50%no-repeat;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    transition: filter .45s ease-out;
+}
+.ct-wrapper>div:not(.active) {
+    display: none;
+}
+.ct-grid {
+    display: grid;
+}
+.ct-flex {
+    display: flex;
+}
+.ct-flex-space_between {
+    justify-content: space-between;
+}
+.ct-flex-start {
+    justify-content: start;
+}
+.ct-flex-center {
+    justify-content: center;
+}
+.ct-flex-align-center {
+    align-items: center;
+}
+.ct-flex-end {
+    justify-content: end;
+}
+.ct-grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.ct-grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.ct-gap-main {
+    gap: var(--ct-margin-24);
+}
+.ct-gap-16 {
+    gap: var(--ct-margin-16);
+}
+.ct-gap-10 {
+    gap: 10px;
+}
+.ct-gap-20 {
+    gap: 20px;
+}
+.ct-splash {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10002;
+}
+.ct-splash_left {
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-splash.jpeg)50% 50%no-repeat;
+    background-size: cover;
+}
+.ct-splash_right {
+    padding: 80px 120px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+.ct-splash_right-bottom {
+    height: 32px;
+}
+.ct-splash_right-top {
+    height: 32px;
+    min-width: 100%;
+    justify-content: end;
+}
+.ct-logo {
+    width: 180px;
+    height: 32px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-logo.svg)50% 50%no-repeat;
+    background-size: contain;
+    justify-self: end;
+    cursor: pointer;
+}
+.ct-title {
+    color: var(--ct-black);
+    font-size: var(--ct-fs-38);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%}
+.ct-pointer {
+    cursor: pointer;
+}
+.ct-form {
+    color: var(--ct-text-color);
+    font-size: var(--ct-fs-18);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: var(--ct-margin-24);
+}
+.ct-form_columns {
+    margin: 52px 0;
+    gap: var(--ct-margin-32);
+}
+#mainSettings .ct-title, .ct-form_columns .ct-input_wrapper~.ct-input_wrapper {
+    margin-top: 0;
+}
+.ct-header {
+    padding: var(--ct-margin-24) 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .06);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+.ct-hidden_wrapper {
+    display: none;
+}
+#secondPanel .ct-panel_settings-page.active, #secondPanel .ct-panel_sub.active .ct-panel_settings-page.active, .ct-hidden_wrapper.active, .ct-panel_sub .ct-panel_settings-page.active {
+    display: block;
+}
+.ct-input_wrapper.ct-input-dynamic {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+.ct-input-dynamic_multiplier {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+    align-items: center;
+}
+.ct-input-dynamic_multiplier:before {
+    width: 24px;
+    height: 24px;
+    display: block;
+    content: "";
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-plus.svg)50% 50%no-repeat;
+}
+.ct-input_wrapper-item {
+    width: 100%}
+.ct-input_remover {
+    display: flex;
+    height: 50px;
+    min-width: 50px;
+    padding: 12px 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #ff456d;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-close.svg)50% 50%no-repeat;
+    gap: 10px;
+}
+.ct-panel {
+    position: fixed;
+    z-index: 10000;
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .05);
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+.ct-panel_sub {
+    right: 0;
+    background: #f8f9fb;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
+.ct-panel_sub.active {
+    right: 500px;
+    opacity: 1;
+    pointer-events: all;
+}
+.ct-panel_sub .ct-panel_settings-page {
+    display: none;
+}
+.ct-panel_right {
+    right: 0;
+}
+.ct-panel_left {
+    left: 0;
+}
+.ct-panel_examples, .ct-panel_examples-item {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.ct-panel_examples {
+    flex-direction: column;
+    gap: 20px;
+    max-height: calc(100vh - 350px);
+    height: fit-content;
+    overflow: auto;
+    margin-right: calc(0 - var(--ct-margin-60));
+    padding-right: var(--ct-margin-60);
+}
+.ct-panel_examples-item {
+    padding: 12px 16px;
+    gap: 10px;
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid #fff;
+    transition: .2s;
+}
+.ct-panel_examples-item.active, .ct-panel_examples-item:hover {
+    border: 2px solid #ff416c;
+}
+.ct-panel_header-controls {
+    display: flex;
+    justify-content: space-between;
+}
+.ct-colors_switcher ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.ct-colors_switcher ul li {
+    min-width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.ct-colors_switcher ul li.active, .ct-tpl_selector-item.active .ct-tpl_selector-item_footer-colors li.active {
+    border: 2px solid var(--ct-success-color);
+}
+.ct-colors_switcher {
+    margin-bottom: var(--ct-margin-32);
+}
+.ct-tpl_selector-item.active:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+.ct-tpl_selector-item {
+    background: #ccc;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, .05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.ct-tpl_selector-item_footer {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    font-size: var(--ct-fs-14);
+    flex: 1;
+}
+.ct-tpl_selector-item_footer-colors {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0;
+    justify-content: start;
+    margin: 0;
+}
+.ct-tpl_selector-item_footer-colors li {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%}
+.ct-panel .ct-title {
+    margin: 20px 0;
+    font-size: var(--ct-fs-32);
+}
+.ct-panel .ct-subtitle {
+    font-size: var(--ct-fs-24);
+}
+.ct-panel_sub .ct-title {
+    margin-bottom: var(--ct-margin-32);
+}
+.ct-panel .ct-button {
+    margin-top: 40px;
+}
+.ct-flex-space_between .ct-button {
+    width: 100%}
+.ct-panel_back {
+    color: #676d7b;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    cursor: pointer;
+}
+.ct-panel_back:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-arrow.svg)50% 50%no-repeat;
+    cursor: pointer;
+}
+.ct-panel_close {
+    width: 24px;
+    height: 24px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-close.svg)50% 50%no-repeat;
+    cursor: pointer;
+}
+#mainPanel.active .ct-panel_settings-page.active {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+#mainPanel.active .ct-panel_settings-page:not(.active) {
+    transform: translateX(-1000px);
+    overflow: hidden;
+    height: 0;
+}
+#mainPanel:not(.active) {
+    left: -600px;
+    transition: .2s;
+}
+.ct-panel>.ct-panel_settings-page {
+    position: absolute;
+    left: var(--ct-margin-60);
+    top: var(--ct-margin-60);
+    right: var(--ct-margin-60);
+    bottom: var(--ct-margin-60);
+}
+.ct-template_container {
+    position: fixed;
+    top: 97px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ct-template_container iframe {
+    border: 0;
+    width: 100%;
+    height: 100%}
+.ct-image_uploader input, .ct-template_wrapper, body.ct-loader:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.ct-iphone-wrapper {
+    left: 50%;
+    top: 50%!important;
+    margin-top: -440px;
+    margin-left: -212px;
+    position: absolute;
+    background: url(https://wedwed.ru/sitemaker/images/iphone15pro.png)50% 50%no-repeat;
+    background-size: cover;
+    border-radius: 75px;
+}
+.ct-iphone-wrapper:after, .ct-unavailable_block {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+}
+.ct-iphone-wrapper:after {
+    content: "";
+    width: 390px;
+    height: 25px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ui-lock-top2.svg?v=2)50% 50%no-repeat;
+    background-size: contain!important;
+    z-index: 6;
+}
+.ct-iphone-wrapper+.ct-setup {
+    filter: invert(1);
+}
+.ct-iphone-wrapper iframe {
+    position: absolute;
+    top: 65px;
+    left: 22px;
+    height: 795px!important;
+    width: 390px!important;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+}
+.ct-unavailable_block {
+    display: flex;
+    border-radius: 12px;
+    background: rgb(232 232 232);
+    max-width: 524px;
+    padding: 12px 20px;
+    font-size: var(--ct-fs-14);
+    align-items: center;
+    gap: 16px;
+    pointer-events: none;
+    opacity: 0;
+}
+.ct-unavailable_block .ct-switcher_smallest {
+    display: inline-block;
+}
+.ct-unavailable_block:before {
+    min-width: 32px;
+    height: 32px;
+    display: block;
+    content: "";
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-alert.svg)50% 50%no-repeat;
+    filter: brightness(0);
+}
+.ct-unavailable~.ct-unavailable_block {
+    opacity: 1;
+    pointer-events: all;
+}
+.ct-unavailable:before {
+    position: fixed;
+    pointer-events: none;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, .8);
+    content: "";
+    right: 0;
+    bottom: 0;
+}
+.ct-unavailable.ct-iphone-wrapper:before {
+    border-radius: 70px;
+}
+#secondPanel .ct-panel_settings-page {
+    display: none;
+}
+.ct-panel_left.active+.ct-template_container.ct-iphone-wrapper {
+    left: 50%;
+    margin-left: 300px;
+}
+.ct-demotext {
+    display: none;
+    width: 660px;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 32px;
+    left: 50px;
+}
+.ct-demotext .ct-title {
+    font-size: var(--ct-fs-24);
+}
+.ct-demotext .ct-button {
+    flex: 1 1 0;
+    white-space: nowrap;
+}
+body.ct-demonstration #setupBlock, body.ct-demonstration .ct-footer_menu, body.ct-demonstration .ct-header, body.ct-demonstration .ct-panel {
+    display: none!important;
+}
+body.ct-demonstration .ct-demotext, body.jiggling .ct-image_uploader-info.active li span {
+    display: flex;
+}
+body.ct-demonstration .ct-panel.active+.ct-template_container {
+    left: 0!important;
+    right: 0!important;
+}
+body.ct-demonstration .ct-template_container {
+    top: 0!important;
+}
+body.ct-loader {
+    position: relative;
+    overflow: hidden;
+}
+body.ct-loader:before {
+    content: "";
+    background: #fff;
+    z-index: 100;
+}
+#setupBlock:before, .ct-setup span:before {
+    content: attr(data-block);
+    position: absolute;
+    bottom: -15px;
+    font-size: 12px;
+    left: 20px;
+    right: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#setupBlock:before {
+    position: static;
+}
+.ct-setup:before {
+    color: var(--ct-pink-color);
+    filter: brightness(0) invert(1);
+    transition: filter .45s ease-out;
+}
+.ct-setup:hover:after, .ct-setup:hover:before {
+    filter: initial;
+}
+.ct-image_uploader {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    background: #f9f9f9;
+    font-size: 12px;
+    position: relative;
+}
+.ct-image_uploader input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+body.jiggling .ct-image_uploader-info.active li:nth-child(2n) {
+    animation-name: jiggle1;
+    animation-iteration-count: infinite;
+    animation-duration: .2s;
+    transform-origin: 50% 10%}
+body.jiggling .ct-image_uploader-info.active li:nth-child(2n-1) {
+    animation-name: jiggle2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: .2s;
+    transform-origin: 30% 5%}
+body.jiggling .ct-image_uploader-info.active li {
+    box-shadow: 2px 2px 25px #00000038;
+}
+.ct-cancel {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-redo.svg)50% 50%no-repeat;
+    transform: scaleX(-1);
+    opacity: .5;
+}
+.ct-cancel, .ct-image_preview span, .ct-redo {
+    cursor: pointer;
+    background-size: contain;
+}
+.ct-redo {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-redo.svg)50% 50%no-repeat;
+    opacity: .5;
+}
+.ct-cancel.active, .ct-redo.active {
+    opacity: 1;
+}
+.ct-image_uploader-info {
+    color: #000;
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ct-image_preview {
+    width: 145px;
+    height: 145px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 5px;
+    border-radius: 12px;
+    position: relative;
+}
+.ct-image_preview span {
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    right: 4px;
+    top: 4px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-image-remove.svg)50% 50%no-repeat;
+}
+.ct-mob-submenu {
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: 72px;
+    left: 0;
+    transition: .3s;
+}
+.ct-mob-submenu>a {
+    width: 100%;
+    margin-top: 24px;
+}
+.ct-mob-menu-ico, .ct-mob-menu-icon {
+    width: 32px;
+    height: 32px;
+    background: url(https://wedwed.ru/sitemaker/images/menu.svg)no-repeat;
+}
+#secondPanel.active+#mainPanel+.ct-template_container+.ct-header .ct-mob-menu-icon, .ct-mob-menu.active .ct-mob-menu-icon {
+    background: url(https://wedwed.ru/sitemaker/images/close.svg)no-repeat;
+}
+.ct-mob-menu {
+    display: none;
+}
+.ct-input_wrapper-relative {
+    position: relative;
+}
+input[type=color] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.ct-colors-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: auto;
+    position: relative;
+    padding-right: 20px;
+}
+.ct-colors-wrapper:after {
+    content: "";
+    min-width: 50px;
+    height: 70px;
+    display: block;
+    pointer-events: none;
+}
+.ct-color-remove {
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    right: -3px;
+    top: -3px;
+    z-index: 5;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-image-remove.svg)50% 50%no-repeat;
+}
+.ct-color-wrapper_overflow {
+    pointer-events: none;
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+.ct-color-wrapper {
+    width: 50px;
+    height: 50px;
+    margin: 15px 10px 10px 0;
+    border-radius: 50%;
+    position: relative;
+    min-width: 50px;
+}
+.ct-color-wrapper span.ct-color {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%}
+.ct-color-wrapper:not(:last-child) span.ct-color-add {
+    display: none!important;
+}
+.ct-color-wrapper:last-child span.ct-color-add {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    margin-left: 10px;
+    border: 1px dashed #000;
+    border-radius: 100%;
+    position: absolute;
+}
+.ct-color-wrapper span.ct-color-add:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-image-remove.svg)50% 50%no-repeat;
+    background-size: contain;
+    filter: grayscale(1) invert(1) brightness(2.5);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+.ct-input_wrapper-half .ct-input_wrapper {
+    flex: 1 1 0;
+}
+.ct-input_wrapper-half .ct-input_wrapper~.ct-input_wrapper {
+    margin-top: 0;
+}
+.ct-hidden {
+    display: none!important;
+}
+@media (min-width:1391px) {
+    .ct-panel_left.active+.ct-template_container {
+        left: 500px;
+        right: 0;
+    }
+    .ct-panel_right.active+.ct-panel_left+.ct-template_container {
+        right: 500px;
+        left: 0;
+    }
+}.ct-panel_footer {
+     min-height: 40px;
+ }
+@media (min-width:769px) and (max-width:1390px) {
+    .ct-splash_right {
+        padding: 60px;
+    }
+    :root {
+        --ct-margin-60: 30px;
+        --ct-margin-32: 20px;
+        --ct-margin-24: 16px;
+        --ct-margin-16: 12px;
+        --ct-margin-8: 6px;
+        --ct-border-radius-12: 10px;
+        --ct-fs-38: 25px;
+        --ct-fs-32: 23px;
+        --ct-fs-24: 18px;
+        --ct-fs-18: 14px;
+        --ct-fs-16: 13px;
+        --ct-fs-14: 12px;
+    }
+    .ct-panel_left.active+.ct-template_container {
+        left: 400px;
+        right: 0;
+    }
+    .ct-panel_right.active+.ct-panel_left+.ct-template_container {
+        right: 400px;
+        left: 0;
+    }
+    .ct-template_container {
+        top: 77px;
+    }
+    .ct-menu_wrapper ul.ct-menu li {
+        padding: 12px 24px 12px 0;
+    }
+    .ct-panel {
+        max-width: 450px;
+    }
+    .ct-button {
+        padding: 12px 18px;
+    }
+    .ct-panel .ct-button {
+        margin-top: 25px;
+        padding: 16px 20px;
+        white-space: nowrap;
+    }
+    .ct-switcher input[type=checkbox]+label:before, .ct-switcher.ct-switcher_small input[type=checkbox]+label:before {
+        height: 15px;
+        width: 15px;
+    }
+    .ct-switcher_smallest input[type=checkbox]+label:before {
+        height: 8px;
+        width: 8px;
+    }
+    .ct-switcher input[type=checkbox]+label, .ct-switcher.ct-switcher_small input[type=checkbox]+label {
+        width: 30px;
+    }
+    #mainSettings .ct-title {
+        margin-bottom: 10px;
+    }
+    .ct-panel_header-controls {
+        align-items: center;
+    }
+    .ct-panel_close {
+        width: 18px;
+        height: 18px;
+        background-size: cover;
+    }
+    .ct-panel .ct-title {
+        margin: 20px 0 10px;
+    }
+    .ct-menu_wrapper ul.ct-sections_setup li {
+        padding: 8px 0;
+    }
+    .ct-colors_switcher ul li {
+        min-width: 45px;
+        height: 45px;
+    }
+    .ct-image_preview {
+        width: 100px;
+        height: 100px;
+    }
+    .ct-switcher input[type=checkbox]+label {
+        min-height: 19px;
+    }
+    .ct-device_switcher input[type=radio]+label, .ct-examples_toggle {
+        padding: 10px 15px;
+    }
+    .ct-device_switcher {
+        border-radius: 6px;
+        width: 280px;
+    }
+    #switcher-d1+label:before, #switcher-d2+label:before {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+    }
+    .ct-image_uploader {
+        font-size: 10px;
+    }
+    .ct-button_full.ct-pay {
+        margin-top: 10px;
+    }
+    .ct-tpl_selector-item_body {
+        height: 150px;
+    }
+    .ct-tpl_selector-item_footer-colors li {
+        width: 20px;
+        height: 20px;
+    }
+    .ct-pantel_footer {
+        min-height: 20px;
+    }
+    .ct-panel_sub.active {
+        right: 400px;
+    }
+}@media (max-width:768px) {
+    .ct-tpl_selector-item_body {
+        height: 150px;
+    }
+    .ct-button_ask, .ct-button_save {
+        padding: 18px;
+        white-space: nowrap;
+    }
+    #secondPanel .ct-panel_settings-page>.ct-title {
+        margin: 0;
+    }
+    .ct-splash.ct-grid {
+        grid-template-columns: initial;
+    }
+    #secondPanel .ct-panel_header-controls, .ct-device_switcher, .ct-splash_left, .ct-splash_right .ct-splash_right-top {
+        display: none;
+    }
+    .ct-panel {
+        width: 100%;
+        max-width: initial;
+    }
+    .ct-header {
+        padding: 15px 16px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        z-index: 10001;
+        min-height: 75px;
+    }
+    .ct-logo {
+        margin-top: 10px;
+    }
+    .ct-header>.ct-flex-center {
+        justify-content: left;
+    }
+    .ct-header>.ct-flex-end, .ct-header>.ct-flex-start, .ct-setup span {
+        display: none;
+    }
+    .ct-mob-menu {
+        justify-content: right;
+    }
+    .ct-mob-menu-icon {
+        width: 32px;
+    }
+    .ct-mob-menu {
+        display: flex;
+    }
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .ct-mob-submenu {
+        padding: 0 20px;
+    }
+    .ct-template_container {
+        top: 74px;
+    }
+    .ct-panel>.ct-panel_settings-page {
+        top: 20px;
+    }
+    .ct-setup {
+        gap: 0;
+        padding: 12px 14px;
+        right: 20px;
+        width: 180px;
+    }
+    .ct-panel_sub.active {
+        right: 0;
+    }
+    .ct-setup:before {
+        left: initial;
+        right: 10px;
+        text-indent: 1px;
+        text-align: right;
+        padding-right: 8px;
+    }
+    .ct-splash_right {
+        overflow: auto;
+        flex-wrap: initial;
+        padding: 30px 16px;
+    }
+    .ct-unavailable_block {
+        bottom: 120px;
+        top: initial;
+        width: 90%;
+        font-size: 10px;
+    }
+}@media (max-width:600px) {
+    .ct-panel_examples {
+        max-height: calc(100% - 200px);
+    }
+    .ct-splash_right .ct-form_columns {
+        grid-template-columns: initial;
+        margin: 40px 0;
+    }
+    .ct-form .ct-pointer {
+        width: 100%}
+    .ct-splash_right-content .ct-title {
+        font-size: 24px;
+    }
+    .ct-demotext {
+        width: calc(100% - 32px);
+        padding: 40px 20px;
+        left: 16px;
+        top: 104px;
+        gap: 20px;
+    }
+    .ct-demotext .ct-flex {
+        flex-direction: column;
+    }
+    .ct-demotext .ct-button, .ct-demotext>.ct-flex {
+        width: 100%}
+    .ct-panel>.ct-panel_settings-page {
+        top: 104px;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+    :root {
+        --ct-fs-38: 24px;
+        --ct-margin-32: 16px;
+        --ct-fs-32: 24px;
+    }
+}.ct-input_error {
+     border-color: red;
+ }
+.dp_daypicker.dp_body tr:first-child {
+    font-size: 11px;
+    color: #b2b2b2;
+    text-transform: uppercase;
+}
+.dp_weekend {
+    color: #ff4e76;
+}
+.Zebra_DatePicker .dp_body .dp_disabled {
+    color: #999;
+}
+.Zebra_DatePicker td, .Zebra_DatePicker th {
+    border-radius: 50%;
+    min-width: 37px;
+    min-height: 37px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    height: 37px;
+    line-height: 37px;
+}
+.Zebra_DatePicker {
+    background: #fff;
+    -webkit-box-shadow: 0 16px 16px rgba(50, 50, 71, .08), 0 24px 32px rgba(50, 50, 71, .08);
+    box-shadow: 0 16px 16px rgba(50, 50, 71, .08), 0 24px 32px rgba(50, 50, 71, .08);
+    border-radius: 16px;
+    padding: 6px;
+    border: 0;
+}
+.ct-calcontainer {
+    position: relative;
+}
+.Zebra_DatePicker .dp_body .dp_selected {
+    background: var(--ct-pink-color);
+}
+button.Zebra_DatePicker_Icon {
+    background-image: url(https://wedwed.ru/sitemaker/images/constr/ct-cal.svg);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    opacity: .5;
+    width: 25px;
+    height: 22px;
+    top: 13px!important;
+}
+#customizeView .ct-menu_wrapper {
+    border-bottom: none;
+    padding: 0;
+}
+#customizeView .ct-menu_wrapper:last-child {
+    padding-bottom: 120px;
+}
+.ct-image_upload-status {
+    width: 50px;
+    height: 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    opacity: 0;
+    margin: 0 auto -5px;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+}
+.ct-image_preview i:hover, .ct-image_upload-status.active {
+    opacity: 1;
+}
+.ct-image_upload-status div {
+    display: block;
+    background: var(--ct-pink-color);
+    height: 100%}
+.ct-image_preview i {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    opacity: .5;
+    background: url(https://wedwed.ru/sitemaker/images/constr/bw.svg)50% 50%no-repeat;
+    background-size: cover;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 100%;
+    filter: grayscale(1);
+}
+.ct-image_preview i.active {
+    filter: none;
+}
+.ct-image_preview[data-filter=black] {
+    background-color: #fff;
+    background-blend-mode: luminosity;
+}
+.ct-unavailable_block input {
+    pointer-events: none;
+}
+.ct-input_label[data-hint] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: fit-content;
+}
+.ct-input_label[data-hint]:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-info.svg)50% 50%no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+@media (max-width:1024px) {
+    .ct-nomob {
+        display: none;
+    }
+}.ct-input_helper {
+     position: absolute;
+     border: 1px solid #e5e5e7;
+     background: #fff;
+     color: #858c95;
+     font-size: 14px;
+     padding: 10px;
+     bottom: 100%;
+     left: 0;
+     righT: 0;
+     margin-bottom: 10px;
+     border-radius: 6px;
+     min-width: 200px;
+ }
+.ct-pleasepay {
+    position: fixed;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: none;
+    widtH: 100%;
+    height: 100%;
+    z-index: 20000;
+}
+.ct-pleasepay.active {
+    display: block;
+}
+.ct-pleasepay_wrapper {
+    width: 581px;
+    padding: 40px 100px;
+    background: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.ct-pleasepay_wrapper img {
+    max-width: 320px;
+}
+.ct-modal_wrapper h3, .ct-pleasepay_wrapper h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+.ct-pleasepay_wrapper p.ct-small {
+    font-size: 12px;
+}
+.ct-pleasepay_wrapper .ct-button {
+    margin: 10px auto;
+}
+.ct-pleasepay_wrapper .ct-panel_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.ct-mobonly {
+    display: none;
+}
+@media (max-width:767px) {
+    .ct-footer_menu {
+        position: fixed;
+        z-index: 100;
+        background: #fff;
+        padding: 0 16px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0-4px 6px rgba(0, 0, 0, .06);
+    }
+    .ct-header>.ct-flex-center {
+        gap: 20px;
+    }
+    .ct-switch_template {
+        padding: 10px 0 10px 20px;
+        white-space: nowrap;
+        position: relative;
+        color: #666;
+    }
+    .ct-demo {
+        padding: 10px 25px;
+    }
+    .ct-switch_template:after {
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url(https://wedwed.ru/sitemaker/images/constr/ct-arrow.svg)50% 50%no-repeat;
+        content: ""}
+    .ct-footer_colors {
+        overflow: auto;
+        margin-bottom: 0;
+    }
+    .ct-footer_colors ul li {
+        min-width: 40px;
+        height: 40px;
+    }
+    .ct-footer_colors ul {
+        flex-wrap: nowrap;
+        margin: 12px auto;
+        width: fit-content;
+        gap: 10px;
+    }
+    .ct-footer_colors::-webkit-scrollbar:horizontal {
+        height: 2px;
+    }
+    .ct-mobonly {
+        display: block;
+    }
+    .ct-pleasepay_wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}.ct-splash_right-content p.ct-small {
+     font-size: 12px;
+     color: #999;
+ }
+.ct-what {
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+}
+.ct-what a {
+    color: #666;
+    min-width: 100%;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dashed;
+}
+.ct-what a:hover {
+    color: #000;
+}
+.ct-panel_settings-page[data-section] .submit_current {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    opacity: .5;
+    border: 0;
+    pointer-events: none;
+}
+.ct-panel_settings-page[data-section] .submit_current.active {
+    opacity: 1;
+    filter: none;
+    -webkit-filter: none;
+    pointer-events: all;
+}
+@media (min-width:767px) {
+    #chatra {
+        bottom: 90px!important;
+    }
+}@media (max-width:767px) {
+    #chatra {
+        bottom: 80px!important;
+    }
+}.ct-telegram {
+     white-space: nowrap;
+     margin-top: -30px;
+     margin-bottom: 30px;
+ }
+.ct-democlose {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.ct-question {
+    background: #f6f6f6;
+    padding: 10px var(--ct-margin-60)0;
+    margin: 0-30px;
+}
+.ct-accordion button, .ct-accordion button:active {
+    border: 0;
+    padding: 0;
+    background: 0;
+}
+.ct-question .ct-accordion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 10px 10px 10px 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+@media (max-width:990px) {
+    .ct-question .ct-accordion {
+        max-width: 100%}
+}@media (max-width:767px) {
+    .ct-question .ct-accordion {
+        padding: 16px 20px;
+    }
+}.ct-question .ct-accordion__control {
+     width: 100%;
+     text-align: start;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     gap: 10px;
+ }
+@media (max-width:767px) {
+    .ct-question .ct-accordion__control {
+        gap: 16px;
+    }
+}.ct-question .ct-accordion__content {
+     max-height: 0;
+     opacity: 0;
+     overflow: hidden;
+     will-change: max-height;
+     -webkit-transition: all .4s ease-out;
+     -o-transition: all .4s ease-out;
+     transition: all .4s ease-out;
+     -webkit-box-sizing: content-box;
+     box-sizing: content-box;
+     padding-right: 32px;
+ }
+.ct-question .ct-accordion__icon {
+    position: relative;
+    display: inline-block;
+    min-width: 24px;
+    height: 24px;
+    -webkit-transition: -webkit-transform .4s ease-out;
+    -o-transition: transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+}
+@media (max-width:480px) {
+    .ct-question .ct-accordion__icon {
+        min-width: 20px;
+        height: 20px;
+    }
+}.ct-question .ct-accordion__icon::before {
+     content: "";
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     min-width: 14px;
+     border-bottom: 1px solid #ff416c;
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+ }
+@media (max-width:480px) {
+    .ct-question .ct-accordion__icon: :before {
+        min-width: 11px;
+    }
+}.ct-question .ct-accordion__icon::after {
+     content: "";
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     min-height: 14px;
+     border-left: 1px solid #ff416c;
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+ }
+@media (max-width:480px) {
+    .ct-question .ct-accordion__icon: :after {
+        min-height: 11px;
+    }
+}.ct-question .open .ct-accordion__icon {
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+ }
+.ct-question .ct-accordion__title {
+    font-weight: 600;
+}
+.ct-question .open .ct-accordion__title {
+    color: #1b1b1b;
+}
+.ct-question .ct-accordion__content ul {
+    padding: 15px;
+    list-style: circle;
+}
+.ct-question .open .ct-accordion__content {
+    opacity: 1;
+    color: #212529!important;
+}
+.ct-accordion__list {
+    padding: 0;
+}
+.ct-shadow .ct-colors-wrapper {
+    flex-direction: column;
+}
+.ct-shadow .ct-color-wrapper {
+    box-shadow: 2px 2px 4px #0002;
+    margin-left: 100px;
+    position: relative;
+}
+.ct-shadow .ct-color-wrapper:first-child:before {
+    content: "Цвет фона";
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ct-shadow .ct-color-wrapper:last-child:before {
+    content: "Цвет текста";
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ct-input_label[for=domain_check] {
+    display: flex;
+    align-items: end;
+    transition: .3s;
+}
+.ct-input_label[for=domain_check].ct-payed_domain {
+    min-height: 30px;
+}
+.ct-input_label[for=domain_check]>div:first-child {
+    white-space: nowrap;
+    display: flex;
+    width: fit-content;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+.ct-input_label[for=domain_check]>div:last-child {
+    flex: auto;
+    width: 100%;
+    position: relative;
+}
+.ct-domain_helper, .ct-domain_helper-mob {
+    border-radius: 10px;
+    background: #b8fed3;
+    min-height: 112px;
+    display: none;
+    align-items: center;
+    padding: 0 20px;
+    pointer-events: none;
+}
+.ct-domain_helper-mob>div {
+    padding: 20px 0;
+}
+.ct-domain_helper svg {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+}
+#ct-domain_block.active .ct-input_label[for=domain_check] {
+    min-height: 112px;
+}
+@media (min-width:769px) {
+    .ct-domain_helper {
+        display: none;
+        position: fixed;
+        width: 430px;
+        margin-left: 15px;
+    }
+    #ct-domain_block.active .ct-domain_helper {
+        display: flex;
+    }
+}@media (min-width:1391px) {
+    .ct-domain_helper {
+        width: 460px;
+    }
+}@media (max-width:768px) {
+    .ct-input_label[for=domain_check]>div: first-child svg {
+        display: none;
+    }
+    .ct-domain_helper {
+        display: none;
+    }
+    .ct-domain_helper-mob {
+        display: flex;
+        position: relative;
+        width: calc(100% - 10px);
+        margin-left: auto;
+        margin-top: 20px;
+    }
+    #mainSettings .ct-button_ask, #mainSettings .ct-button_save, #mainSettings .ct-pay {
+        margin-top: 20px;
+    }
+    .ct-input_label[for=domain_check] {
+        min-height: fit-content;
+    }
+    .ct-domain_helper-mob svg {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        transform: scaleY(-1);
+    }
+    .ct-question {
+        padding: 10px 15px 0;
+        margin: 0-15px;
+    }
+}#setupAddBlock span, .ct-header_colors, .ct-header_logo {
+     display: none;
+ }
+@media (min-width:1024px) {
+    .ct-header_logo {
+        display: block;
+        margin-top: 10px;
+    }
+    .ct-header_colors {
+        overflow: auto;
+        margin-bottom: 0;
+        display: block;
+        margin-left: 20px;
+    }
+    .ct-header_colors ul li {
+        min-width: 20px;
+        height: 20px;
+    }
+    .ct-header_colors ul {
+        flex-wrap: nowrap;
+        margin: 0;
+        width: fit-content;
+        gap: 5px;
+    }
+    .ct-header_colors::-webkit-scrollbar:horizontal {
+        height: 2px;
+    }
+}.ct-sticky_buttons {
+     position: sticky;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background: #fff;
+     padding-left: var(--ct-margin-60);
+     padding-right: var(--ct-margin-60);
+ }
+@media (max-width:600px) {
+    .ct-sticky_buttons {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}@media (max-width:390px) {
+    .ct-button {
+        padding: 15px 18px;
+    }
+    .ct-sticky_buttons {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}.ct-labels {
+     position: absolute;
+     left: 0;
+     pointer-events: none;
+ }
+.ct-label {
+    width: 52px;
+    height: 18px;
+    display: block;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: lowercase;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.ct-label.ct-white {
+    background: #fff8fa;
+    color: #000;
+}
+.ct-label.ct-green {
+    background: #5dffb6;
+    color: #000;
+}
+.ct-resetpassword, .ct-toauth, .ct-tomain {
+    color: #555;
+    border-bottom: 1px dashed #555;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    width: fit-content!important;
+}
+@media (max-width:1023px) {
+    .ct-tomain {
+        margin: 10px auto 0;
+    }
+    .ct-resetpassword {
+        margin: auto;
+    }
+}#hfont li img, #tfont li img {
+     max-height: 20px;
+     float: right;
+     vertical-align: middle;
+     width: 50%;
+     object-position: 100%;
+     object-fit: contain;
+ }
+.ct-tpl_filter, .ct-tpl_filter_item {
+    display: flex;
+    align-items: center;
+}
+.ct-tpl_filter_item {
+    width: 50%;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e5e5e7;
+    padding: 12px 0;
+    position: relative;
+    cursor: pointer;
+}
+.ct-tpl_filter_item_full {
+    width: 100%}
+.ct-tpl_filter_item:nth-child(even) {
+    border-left: none;
+}
+.ct-tpl_filter_item_icon {
+    width: 20px;
+    height: 20px;
+}
+.ct-tpl_filter_item_title {
+    color: #383d42;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+}
+.ct-menu_wrapper {
+    padding-top: 0;
+    border-top: 0;
+}
+.ct-tpl_filter_item .ct-input {
+    padding: initial;
+    background: 0;
+    border: 0;
+    border-radius: initial;
+    display: block;
+    width: initial;
+    position: static;
+}
+.ct-tpl_filter_item .ct-input_select:after {
+    content: none;
+}
+.ct-tpl_filter_item .ct-input_select.active ul {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, .05);
+}
+.ct-tpl_filter_item .ct-input_select ul li {
+    cursor: pointer;
+    transition: .2s;
+}
+.ct-tpl_filter_item .ct-input_select ul li:hover {
+    background: #ff416c;
+    color: #fff;
+}
+.ct-tpl_filter_item .ct-input_select ul {
+    margin-top: 0;
+    border-radius: 10px;
+}
+#filterTpl .ct-subtitle, .ct_checkbox {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+#filterTpl .ct-subtitle {
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23.4px;
+    text-align: left;
+}
+#filterTpl .ct-subtitle img {
+    transition: .3s;
+}
+#filterTpl .ct-menu_wrapper.active .ct-subtitle img, #filterTpl .ct-menu_wrapper.start .ct-subtitle img {
+    transform: rotate(-180deg);
+}
+.ct_checkbox {
+    min-height: 16px;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+.ct_checkbox:not(:first-child) {
+    margin-top: 12px;
+}
+.ct_checkbox_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.ct_checkbox_box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(https://wedwed.ru/sitemaker/images/constr/cbx.webp);
+    background-size: contain;
+    cursor: pointer;
+    pointer-events: none;
+}
+.ct_checkbox_input:checked+.ct_checkbox_box {
+    background-image: url(https://wedwed.ru/sitemaker/images/constr/cbx-1.webp);
+}
+.ct_checkbox label {
+    padding-left: 28px;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+#filterTpl .ct-title {
+    margin-top: 32px;
+}
+#filterTpl .ct-menu_wrapper {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 32px;
+    margin-bottom: 0;
+    margin-top: 32px;
+}
+.ct-field-hidden-wrap {
+    margin-top: 12px;
+    display: none;
+}
+.ct-filter-toggle-title {
+    color: #ff416c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    text-align: left;
+    margin-top: 16px;
+}
+.ct-menu_section {
+    margin-top: 20px;
+    display: none;
+}
+#filterTpl .ct-flex {
+    gap: 12px;
+    margin: auto 0 0;
+}
+#filterTpl {
+    height: auto!important;
+}
+@media (max-width:768px) {
+    #filterTpl .ct-menu_wrapper {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    #filterTpl .ct-title {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+}#filterTpl .ct-sticky_buttons {
+     padding-bottom: 10px;
+ }
+#filterTpl .ct-sticky_buttons .ct-button {
+    margin-top: 15px;
+}
+#selectTpl .js-filter.active:after {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: "";
+    background: var(--ct-pink-color);
+}
+.ct-disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+.ct-addquest_tools {
+    display: flex;
+    gap: 20px;
+}
+.ct-addquest_tools>div {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.ct-addquest_tools-higher, .ct-addquest_tools-lower {
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-chevron.svg)50% 50%no-repeat;
+    background-size: contain;
+    opacity: .2;
+    pointer-events: none;
+}
+.ct-addquest_tools-addremove {
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-plus_gray.svg)50% 50%no-repeat;
+}
+.ct-addquest_tools.active .ct-addquest_tools-addremove {
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-minus_gray.svg)50% 50%no-repeat;
+}
+.ct-addquest_tools-higher {
+    transform: rotate(180deg);
+}
+.ct-addquests-item:not(.active) .ct-addquest_tools-higher, .ct-addquests-item:not(.active).ct-addquest_tools-lower {
+    opacity: 0;
+    pointer-events: none;
+}
+.ct-addquests-item.active .ct-addquest_tools-higher.active, .ct-addquests-item.active .ct-addquest_tools-lower.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.ct-addquests_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.ct-current_template-price {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    font-size: 11px;
+    text-align: center;
+    width: fit-content;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+@media (max-width:768px) {
+    #mainSettings .ct-button_ask, #mainSettings .ct-pay {
+        margin-top: 40px;
+    }
+    .ct-current_template-price {
+        top: 5px;
+    }
+}@media (min-width:769px) and (max-width:1390px) {
+    .ct-current_template-price {
+        top: 5px;
+    }
+    .ct-what {
+        padding: 10px 0;
+    }
+}@media (min-width:769px) {
+    #secondPanel {
+        overflow: initial;
+    }
+    #secondPanel>.ct-panel_settings-page {
+        right: 0;
+        padding-right: var(--ct-margin-60);
+        overflow: auto;
+    }
+}#setupAddBlock {
+     top: 80px;
+ }
+#setupAddBlock:before {
+    content: "Добавить блок";
+    left: -2px;
+}
+#setupAddBlock:after {
+    content: "+";
+    color: #ff416c;
+    font-size: 28px;
+    line-height: 18px;
+    background: 0 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:768px) {
+    .ct-splash_right-content .ct-title {
+        font-size: 23px;
+    }
+    #setupAddBlock:after {
+        font-size: 35px;
+    }
+    .ct-calcontainer, .ct-calcontainer>div:before {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000000;
+    }
+    .ct-calcontainer>div:before {
+        content: "";
+        z-index: -1;
+        top: 0;
+        background: rgba(0, 0, 0, .35);
+    }
+    .ct-calcontainer>div {
+        position: initial;
+        width: 100%!important;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding-bottom: 20px;
+    }
+    .ct-calcontainer>div>table {
+        width: fit-content!important;
+        margin: auto;
+    }
+    .Zebra_DatePicker td, .Zebra_DatePicker th {
+        min-width: 42px;
+        min-height: 42px;
+        line-height: 42px;
+        height: 42px;
+        font-size: 14px;
+    }
+    button.Zebra_DatePicker_Icon {
+        width: 100%!important;
+        height: 100%!important;
+        top: 0!important;
+    }
+    .Zebra_DatePicker_Icon_Wrapper input {
+        padding-right: 0!important;
+    }
+    .ct-form {
+        padding-bottom: 70px;
+    }
+    .ct-form_foot {
+        position: absolute;
+        bottom: 0;
+        background: #fff;
+        padding: 10px 16px;
+        left: 0;
+        right: 0;
+    }
+    .ct-form_foot>a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}@media (min-width:768px) {
+    .ct-splash .Zebra_DatePicker {
+        bottom: 50px;
+        top: initial!important;
+        -webkit-box-shadow: 0-16px 16px rgba(50, 50, 71, .08), 0-24px 32px rgba(50, 50, 71, .08);
+        box-shadow: 0 16px 16px rgba(50, 50, 71, .08), 0-24px 32px rgba(50, 50, 71, .08);
+    }
+    #mainSettings.active {
+        min-height: calc(100% - 30px);
+    }
+    #mainSettings.active>.ct-menu_wrapper {
+        margin-bottom: 0;
+    }
+    #mainSettings.active>.ct-input_wrapper {
+        margin-bottom: auto;
+    }
+}@media (min-width:375px) and (max-width:768px) {
+    .ct-splash .ct-toconstr {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .ct-splash_right {
+        padding-top: 0;
+    }
+    .ct-form_intro {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .ct-splash_right .ct-form_columns {
+        margin-top: 20px;
+    }
+    .Zebra_DatePicker td, .Zebra_DatePicker th {
+        min-width: 42px;
+        min-height: 42px;
+        line-height: 42px;
+        height: 42px;
+        font-size: 14px;
+    }
+    .ct-telegram {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .ct-splash .ct-title {
+        display: none;
+    }
+}@media (max-width:375px) {
+    .ct-form_intro {
+        font-size: 12px;
+    }
+}@media (max-width:390px) {
+    .ct-splash_right-content .ct-title {
+        font-size: 20px;
+    }
+}.ct-telegram {
+     align-items: center;
+ }
+.ct-telegram img {
+    width: 15px;
+    height: 15px;
+}
+.ct-tpl_selector-item {
+    border-radius: 10px;
+    padding: 16px 24px;
+    box-shadow: 0 20px 50px 0#00000014;
+    background: #fff;
+}
+.ct-labels {
+    z-index: 20;
+    top: 24px;
+}
+.ct-tpl_selector-item_body {
+    width: 175px;
+    height: 160px;
+}
+.ct-tpl_selector-item_body-mobile_wrapper {
+    top: 40px;
+    right: 18px;
+    position: absolute;
+    overflow: hidden;
+    width: 65px;
+    height: 128px;
+    pointer-events: none;
+    content: ""}
+.ct-tpl_selector-item_body-mobile_wrapper:before {
+    background: url(https://wedwed.ru/sitemaker/images/iphone.webp)50% 50%no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.ct-android .ct-tpl_selector-item_body-mobile_wrapper:before {
+    background: url(https://wedwed.ru/sitemaker/images/samsung.webp)50% 50%no-repeat;
+    background-size: contain;
+    width: initial;
+    height: initial;
+    left: 3px;
+    top: 8px;
+    bottom: 8px;
+    right: 3px;
+}
+.ct-tpl_selector-item_body-mobile {
+    width: 55px;
+    height: 118px;
+    border-radius: 6px;
+    position: absolute;
+    top: 5px;
+    overflow: hidden;
+    right: 5px;
+}
+.ct-tpl_selector-item.active:after {
+    border-radius: 10px;
+    border: 2px solid var(--ct-pink-color);
+    opacity: .3;
+}
+.ct-tpl_selector-item_footer .ct-button {
+    border-color: var(--ct-pink-color);
+    color: var(--ct-pink-color);
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 176px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .2s;
+}
+.ct-tpl_selector-item_footer .ct-button:hover {
+    background: var(--ct-pink-color);
+    color: #fff;
+}
+.ct-tpl_selector-item_body {
+    border: 3px solid #1d1d1b;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
+.ct-tpl_selector-item_footer a.ct-example {
+    color: #666;
+    min-width: 100%;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dashed;
+    font-size: 12px;
+    text-align: center;
+}
+.ct-tpl_selector-item_footer {
+    padding: 12px 0;
+}
+.ct-tpl_selector-item_footer span {
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.ct-video_button {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 7px;
+    font-size: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    background: #1e1e1e;
+    color: #fff;
+}
+@media (min-width:769px) and (max-width:1390px) {
+    .ct-tpl_selector-item {
+        padding: 16px 12px;
+    }
+    .ct-tpl_selector {
+        gap: 12px;
+    }
+    .ct-tpl_selector-item_body {
+        width: 138px;
+        height: 124px;
+    }
+    .ct-tpl_selector-item_body-mobile_wrapper {
+        top: 30px;
+        right: 4px;
+        width: 50px;
+        height: 105px;
+    }
+    .ct-tpl_selector-item_body-mobile {
+        width: 42px;
+        height: 91px;
+        border-radius: 6px;
+        position: absolute;
+        top: 7px;
+        overflow: hidden;
+        right: 4px;
+    }
+}@media (max-width:768px) {
+    .ct-video_button {
+        height: 13px;
+        font-size: 5px;
+    }
+    .ct-temp-price__main-info__bottom .ct-video_button {
+        font-size: 3px;
+    }
+    .ct-tpl_selector-item {
+        padding: 16px 12px;
+    }
+    .ct-tpl_selector {
+        gap: 12px;
+    }
+    .ct-tpl_selector .ct-tpl_selector-item_body {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 266px;
+        opacity: 0;
+    }
+    .ct-tpl_selector .ct-tpl_selector-item_body-mobile_wrapper {
+        width: 135px;
+        height: 266px;
+        position: relative;
+        top: initial;
+        right: initial;
+        margin: auto;
+    }
+    .ct-tpl_selector .ct-tpl_selector-item_body-mobile {
+        width: 113px;
+        height: 245px;
+        border-radius: 6px;
+        position: absolute;
+        top: 10px;
+        overflow: hidden;
+        right: 11px;
+    }
+    .ct-labels {
+        top: 33px;
+    }
+}.ct-goup_wrapper.active {
+     opacity: 1;
+ }
+.ct-goup_wrapper {
+    position: sticky;
+    bottom: 10px;
+    left: 5px;
+    z-index: 20;
+    opacity: 0;
+    transition: .2s;
+    cursor: pointer;
+}
+.ct-button, .ct-type_switcher {
+    align-items: center;
+}
+.ct-type_switcher {
+    background: #fff;
+    min-width: 294px;
+    width: 90%;
+    height: 42px;
+    font-size: 16px;
+    color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+    transition: .2s;
+    margin-top: 24px;
+}
+.ct-type_switcher-item {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.ct-type_switcher:not(.active) .ct-type_switcher-item:first-child {
+    color: #fff;
+}
+.ct-type_switcher:not(.active):before {
+    left: 4px;
+}
+.ct-type_switcher:before {
+    border-radius: 6px;
+    background: #ff416c;
+    position: absolute;
+    width: calc(50% - 4px);
+    top: 4px;
+    bottom: 4px;
+    content: "";
+    z-index: 1;
+    transition: .2s;
+}
+.ct-type_switcher.active .ct-type_switcher-item:first-child, .ct-type_switcher:not(.active) .ct-type_switcher-item:last-child {
+    font-weight: 300;
+}
+.ct-type_switcher.active .ct-type_switcher-item:last-child {
+    color: #fff;
+}
+.ct-type_switcher.active:before {
+    left: 50%}
+.ct-temp-price-container {
+    background: #ffe7e8!important;
+    padding: 0 32px!important;
+    box-shadow: none!important;
+}
+.ct-type_switcher {
+    z-index: 1;
+}
+.ct-sticky_buttons {
+    z-index: 3;
+}
+.ct-temp-price__center__price {
+    margin-top: 32px!important;
+}
+.ct-temp-price__main-info__top:before {
+    display: none;
+}
+.ct-temp-price__main-info__top {
+    font-size: 25px;
+    line-height: 37px;
+    color: #1b1b1b;
+    font-weight: 600;
+    max-width: 370px;
+    margin: auto;
+    margin-top: 0!important;
+}
+.ct-temp-price__main-info__top b {
+    color: #ff416c;
+    position: relative;
+    background: #fff;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.ct-temp-price__main-info__bottom {
+    height: 230px;
+    position: relative;
+}
+.ct-temp-price__main-info__bottom .ct-tpl_selector-item_body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 230px;
+    width: 245px;
+}
+.ct-temp-price__main-info__bottom .ct-tpl_selector-item_body-mobile {
+    width: 70px;
+    height: 150px;
+    border-radius: 6px;
+    position: absolute;
+    top: 9px;
+    overflow: hidden;
+    right: 5px;
+}
+.ct-sticky_buttons {
+    padding: 0;
+    margin: 0;
+}
+.ct-modal .ct-modal__column {
+    display: flex;
+    overflow: hidden;
+}
+.ct-modal .ct-modal__column>div {
+    flex: 1;
+}
+.ct-modal_cover {
+    background: linear-gradient(98.45deg, #ffc1c4 0, #ffe3d8 49.31%, #f6d5cf 100%);
+    max-width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ct-modal_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.ct-modal_wrapper.ct-modal__column {
+    width: 820px;
+    height: fit-content;
+}
+.ct-modal_wrapper.ct-modal__column .ct-modal_content ul {
+    padding: 0 20px;
+    list-style: disc;
+}
+.ct-modal_wrapper.ct-modal__column .ct-modal_content ul li {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.ct-modal_wrapper.ct-modal__column .ct-modal_content ul li::marker {
+    color: #ff416c;
+}
+.ct-modal_wrapper.ct-modal__column .ct-modal_content h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+}
+.ct-modal_wrapper.ct-modal__column .ct-modal_content {
+    line-height: 24px;
+    padding: 40px;
+}
+.ct-modal_content-shadow {
+    padding: 20px;
+    box-shadow: 2px 1px 20px 0#3f27651a;
+    border-radius: 10px;
+}
+.ct-button.ct-green {
+    background: #5dffb6;
+    color: #000;
+}
+.ct-present {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 140px;
+    right: 50px;
+    background: url(https://wedwed.ru/sitemaker/images/present2.webp)50% 50%no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.ct-present:before {
+    content: "1+1";
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+@media (max-width:767px) {
+    .ct-present {
+        right: 20px;
+    }
+    .ct-modal_content-shadow {
+        box-shadow: none;
+        padding-bottom: 80px;
+    }
+    .ct-modal[data-modal=what_modal] .ct-modal_content:after {
+        width: 100%;
+        position: fixed;
+        content: "";
+        pointer-events: none;
+        left: 0;
+        bottom: 100px;
+        height: 100px;
+        background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+    }
+}.ct-modal {
+     position: fixed;
+     background: rgba(0, 0, 0, .2);
+     backdrop-filter: blur(20px);
+     -webkit-backdrop-filter: blur(20px);
+     display: none;
+     widtH: 100%;
+     left: 0;
+     top: 0;
+     height: 100%;
+     z-index: 20000;
+ }
+.ct-modal.active {
+    display: block;
+}
+.ct-sticky_buttons .ct-button, .ct-temp-price__main-info .ct-button {
+    margin: 20px auto;
+}
+.ct-button {
+    gap: 3px;
+    font-weight: 600;
+}
+.ct-button.ct-modal_open, .ct-button.ct-pay {
+    border: 0!important;
+}
+.ct-modal_wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ct-modal_wrapper:not(.ct-modal__column) {
+    width: 581px;
+    max-height: 643px;
+    text-align: center;
+}
+.ct-modal_content {
+    padding: 40px 100px;
+    background: #fff;
+}
+.ct-modal_wrapper p.ct-small {
+    font-size: 12px;
+}
+.ct-modal[data-modal=modal_present] .ct-modal_cover img {
+    max-width: 200px;
+}
+.ct-modal_wrapper .ct-button {
+    margin: 10px auto;
+}
+.ct-modal_wrapper .ct-panel_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.ct-demonstration .ct-present {
+    display: none;
+}
+@media (max-width:767px) {
+    .ct-modal_wrapper {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: initial;
+        line-height: 21px;
+        transition: .2s;
+        transition-delay: .2s;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background: #fff;
+    }
+    .ct-modal_wrapper:not(.ct-modal__column) {
+        width: 100%}
+    .ct-modal .ct-modal_wrapper {
+        transform: translateY(200%);
+    }
+    .ct-modal.active .ct-modal_wrapper {
+        transform: translateY(0);
+    }
+    .ct-modal .ct-modal__column>div {
+        flex: initial;
+    }
+    .ct-modal_wrapper.ct-modal__column .ct-modal_content {
+        padding: 22px 16px 0;
+        max-height: 300px;
+        height: fit-content;
+        overflow: auto;
+        margin-bottom: 100px;
+        margin-top: 10px;
+    }
+    .ct-modal_wrapper .ct-modal_content {
+        padding: 22px 30px 30px;
+        max-height: 300px;
+        height: fit-content;
+    }
+    .ct-modal_wrapper.ct-modal__column {
+        width: 100%;
+        max-height: 90%;
+        flex-direction: column;
+    }
+    .ct-modal_cover {
+        max-width: 100%}
+    .ct-modal_cover, .ct-modal_cover img {
+        max-height: 200px;
+    }
+    .ct-modal .ct-modal_wrapper .ct-button {
+        position: absolute;
+        bottom: 10px;
+        left: 16px;
+        right: 16px;
+        width: initial;
+    }
+    #mainSettings .ct-button_ask, #mainSettings .ct-pay {
+        margin-top: 20px;
+    }
+    .ct-temp-price__main-info__top {
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 300px;
+    }
+    .ct-temp-price-container {
+        padding: 0 20px!important;
+    }
+    .ct-modal_content-shadow {
+        padding: 20px 0 80px;
+    }
+}@media (min-height:600px) and (max-width:767px) {
+    .ct-modal_wrapper.ct-modal__column .ct-modal_content {
+        max-height: 400px;
+    }
+}@media (min-width:769px) and (max-width:1390px) {
+    .ct-temp-price__main-info__top {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .ct-tpl_selector-item_body-mobile_wrapper {
+        right: 15px;
+    }
+}@media (min-width:1391px) {
+    .ct-panel>.ct-panel_settings-page {
+        left: 20px;
+        right: 20px;
+    }
+    .ct-tpl_selector-item {
+        padding: 16px 19px;
+    }
+    .ct-tpl_selector.ct-gap-20 {
+        gap: 16px;
+    }
+    .ct-menu_wrapper>ul.ct-tpl_sections li {
+        width: 100%;
+        justify-content: center;
+    }
+    .ct-tpl_selector-item_body-mobile_wrapper {
+        right: 8px;
+    }
+}#selectTpl .ct-menu_wrapper {
+     border-bottom: none;
+     padding-bottom: 0;
+ }
+.ct-temp-price__main-info__bottom .ct-tpl_selector-item_body {
+    margin-left: -15px;
+}
+.ct-temp-price__main-info__bottom .ct-tpl_selector-item_body-mobile_wrapper {
+    width: 80px;
+    height: 168px;
+    right: 19px;
+}
+@media (min-width:1391px) {
+    .ct-temp-price__main-info__bottom .ct-tpl_selector-item_body-mobile_wrapper {
+        right: 50px;
+    }
+}.ct-icon_item {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+.ct-icon_item--font:before {
+    background: url(https://wedwed.ru/sitemaker/images/constr/sm_font-icon.svg)50% 50%no-repeat;
+    background-size: 24px;
+}
+.ct-icon_item--music:before {
+    background: url(https://wedwed.ru/sitemaker/images/constr/sm_music-icon.svg)50% 50%no-repeat;
+    background-size: 22px;
+}
+.ct-icon_item--hello:before {
+    background: url(https://wedwed.ru/sitemaker/images/constr/sm_hello-icon.svg)50% 50%no-repeat;
+    background-size: 30px;
+}
+.ct-icon_item--color:before {
+    background: url(https://wedwed.ru/sitemaker/images/constr/sm_color-icon.svg)50% 50%no-repeat;
+    background-size: 30px;
+}
+.ct-icon_item--anim:before {
+    background: url(https://wedwed.ru/sitemaker/images/constr/sm_anim-icon.svg)50% 50%no-repeat;
+    background-size: 30px;
+}
+.ct-hello_wrapper {
+    margin-left: -20px;
+    margin-right: -20px;
+    text-align: center;
+}
+.ct-hello_wrapper a {
+    color: #333;
+    margin-top: 20px;
+    display: block;
+}
+.ct-hello_wrapper a:hover {
+    color: #ff416c;
+}
+.ct-icon_item:before {
+    content: "";
+    width: 32px;
+    heighT: 30px;
+    display: block;
+}
+.ct-hello_item {
+    min-width: 145px;
+    max-width: 145px;
+    height: 315px;
+    transform: scale(.8);
+    border-radius: 13px;
+    border: 1.3px solid #fff;
+    overflow: hidden;
+    transition: .2s;
+    margin: 0;
+    text-align: center;
+    font-size: 11px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+}
+.ct-hello_items .slick-current .ct-hello_item {
+    border-color: #ff416c;
+    transform: scale(1);
+    transition: .2s;
+}
+.ct-hello_items .slick-track, .ct-title[data-hint] {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.ct-hello_item img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+@media (min-width:769px) and (max-width:1390px) {
+    .ct-hello_wrapper {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}@media (max-width:600px) {
+    .ct-hello_wrapper {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}.ct-title[data-hint] .ct-input_helper {
+     font-size: 12px;
+     line-height: 14px;
+     font-weight: 400;
+     color: #000;
+     box-shadow: 1px 1px 10px rgba(0, 0, 0, .27);
+ }
+.ct-title[data-hint] {
+    gap: 10px;
+    position: relative;
+}
+.ct-title[data-hint]:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(https://wedwed.ru/sitemaker/images/constr/ct-info.svg)50% 50%no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.ct-hello_data .ct-image_uploader-info ul, .ct-hello_data .ct-image_uploader-info>.ct-image_uploader {
+    margin: 0;
+    padding: 0;
+}
+.ct-hello_data .ct-image_uploader-info .ct-image_preview~.ct-image_uploader {
+    margin: 5px;
+}
+.ct-hello_data {
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+.ct-hello_buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.ct-hello_buttons a {
+    text-decoration: underline;
+    color: #331;
+}
+.ct-hello_data .ct-input_helper {
+    top: 100%;
+    bottom: initial;
+    margin-top: 10px;
+    margin-bottom: initial;
+    z-index: 200;
+}
+.ct-button.ct-button_small-margin {
+    margin-top: 20px;
+}
+.ct-hello_data.active {
+    height: 630px;
+}
+@media (min-width:769px) and (max-width:1390px) {
+    .ct-hello_data.active {
+        height: 560px;
+    }
+}.ct-tpl_filter {
+     margin-bottom: 20px;
+ }
+.ct-menu_wrapper {
+    margin-top: 0;
+}
+.ct-tpl_sections {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    overflow: auto;
+    flex-wrap: nowrap;
+    margin-bottom: 20px!important;
+}
+.ct-tpl_sections li {
+    border-radius: 10px;
+    background: #f1f1f1;
+    padding: 10px 16px;
+    font-weight: 600!important;
+    font-size: 12px;
+    white-space: nowrap;
+    border: 1px solid #f1f1f1;
+    cursor: pointer;
+}
+.ct-tpl_sections li.active {
+    background: #fff;
+    color: #ff416c;
+    border-color: #ff416c;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar:horizontal {
+    height: 0;
+}
+@media (max-width:767px) {
+    .ct-tpl_sections li {
+        width: 100%;
+        justify-content: center;
+    }
+}.ct-hello_items .slick-prev {
+     left: 0;
+     transform: scale(-1);
+ }
+.ct-hello_items .slick-next {
+    right: 0;
+}
+.ct-hello_items .slick-arrow {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    top: 0;
+    margin-top: -20px;
+    width: 130px;
+    opacity: 0;
+    padding: 0;
+}
+@media (max-width:1400px) {
+    .ct-hello_items .slick-arrow {
+        width: 110px;
+    }
+}#mainSettings .ct-menu_wrapper {
+     margin-top: 10px;
+     border-top: 1px solid var(--ct-disabled-color);
+ }
+#mainSettings .ct-menu_wrapper>ul li {
+    margin: 20px 0;
+}
+.ct-text_align-left, .ct-text_align-left * {
+    text-align: left!important;
+}
+.ct-text_align-center, .ct-text_align-center * {
+    text-align: center!important;
+}
+.ct-text_align-right, .ct-text_align-right * {
+    text-align: right!important;
+}
+.ct-preloader_row-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    width: 300px;
+    height: 30px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    text-align: center;
+    z-index: 10000000;
+}
+.ct-preloader_row {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    border-radius: 8px;
+    background: #fff;
+}
+.ct-preloader_data {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 40px;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon {
+    padding-left: 40px;
+    transition: .2s;
+    background: -webkit-gradient(linear, left top, right top, from(#ff416c), to(#fc927b))!important;
+    background: -o-linear-gradient(left, #ff416c 0, #fc927b 100%)!important;
+    background: linear-gradient(90deg, #ff416c 0, #fc927b 100%)!important;
+    background-clip: text!important;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon:not(:hover) {
+    filter: grayscale(1) brightness(.5);
+    -webkit-filter: grayscale(1) brightness(.5);
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon[data-item=customizeView]:before {
+    background: url(https://wedwed.ru/sitemaker/images/menu-icon-1_act.svg)0 50%no-repeat;
+    background-size: 25px 25px;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon[data-item=editSections]:before {
+    background: url(https://wedwed.ru/sitemaker/images/menu-icon-2_act.svg)0 50%no-repeat;
+    background-size: 25px 25px;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon[data-item=changeData]:before {
+    background: url(https://wedwed.ru/sitemaker/images/menu-icon-3_act.svg)0 50%no-repeat;
+    background-size: 25px 25px;
+}
+.ct-menu_wrapper ul.ct-menu li.ct-menu-icon[data-item=selectTpl]:before {
+    background: url(https://wedwed.ru/sitemaker/images/menu-icon-4_act.svg)0 50%no-repeat;
+    background-size: 25px 25px;
+}
+.ct-music_uploader {
+    position: relative;
+}
+.ct-music_uploader input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 100;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.ct-menu_wrapper-music .ct-button {
+    width: 50%;
+    margin: 0;
+}
+.ct-menu_wrapper-music .ct-button.ct-music_uploader {
+    margin: 0;
+    padding: 0;
+    background: 0 0;
+    color: #000;
+    text-align: left;
+    justify-content: start;
+}
+.ct-menu_wrapper-music .ct-button.ct-music_uploader:hover {
+    cursor: pointer;
+    color: #ff416c;
+}
+.ct-menu_wrapper-music {
+    padding: 0 0 20px!important;
+    margin: 20px 0 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee!important;
+}
