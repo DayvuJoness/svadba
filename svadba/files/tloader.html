@@ -1299,15 +1299,17 @@
 </footer>
 <!--<script src="./main.js"></script>-->
 
-...
 <script>
     // 1. Получаем дату свадьбы
     const weddingDate = new Date(2025, 6, 18, 17, 0, 0); // 18 июля 2025, 17:00
+    console.log("Wedding date:", weddingDate); // <--- ДОБАВЛЕНО
 
     // 2. Функция для расчета разницы во времени
     function getTimeRemaining() {
         const now = new Date();
+        console.log("Current date:", now); // <--- ДОБАВЛЕНО
         const timeDiff = weddingDate.getTime() - now.getTime();
+        console.log("Time difference (ms):", timeDiff); // <--- ДОБАВЛЕНО
 
         if (timeDiff <= 0) {
             return {days: 0, hours: 0, minutes: 0, seconds: 0};
@@ -1318,6 +1320,7 @@
         const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
+        console.log("Calculated time:", {days, hours, minutes, seconds}); // <--- ДОБАВЛЕНО
         return {days, hours, minutes, seconds};
     }
 
@@ -1325,12 +1328,15 @@
     function updateTimerDisplay() {
         const time = getTimeRemaining();
 
+        console.log("Time:", time); // Выводим текущее время
+
         // Обновляем ДНИ
         const daysSpans = document.querySelectorAll('#days .sm-timer-time_number-span');
         if (daysSpans.length > 0) {
             daysSpans.forEach((span, index) => {
                 const digit = Math.floor(time.days / Math.pow(10, daysSpans.length - 1 - index)) % 10;
                 span.textContent = digit;
+                console.log("Day span", index, "set to", digit); // Выводим, какое число куда записали
             });
         }
 
@@ -1340,6 +1346,7 @@
             hoursSpans.forEach((span, index) => {
                 const digit = Math.floor(time.hours / Math.pow(10, hoursSpans.length - 1 - index)) % 10;
                 span.textContent = digit;
+                console.log("Hour span", index, "set to", digit);
             });
         }
 
@@ -1349,6 +1356,7 @@
             minutesSpans.forEach((span, index) => {
                 const digit = Math.floor(time.minutes / Math.pow(10, minutesSpans.length - 1 - index)) % 10;
                 span.textContent = digit;
+                console.log("Minute span", index, "set to", digit);
             });
         }
 
@@ -1358,6 +1366,7 @@
             secondsSpans.forEach((span, index) => {
                 const digit = Math.floor(time.seconds / Math.pow(10, secondsSpans.length - 1 - index)) % 10;
                 span.textContent = digit;
+                console.log("Second span", index, "set to", digit);
             });
         }
     }
