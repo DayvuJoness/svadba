@@ -1299,129 +1299,6 @@
 </footer>
 <script src="./main.js"></script>
 <script>
-    // if ( window.location === window.parent.location && window.parent.location.origin === 'https://wedwed.ru')
-    // {
-    //     // alert('no way!');
-    //     // window.location.href = 'https://wedwed.ru';
-    // }
-    // else {
-    var osections;
-    const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries)
-                if (entry.isIntersecting) {
-                    var data = {cursect: entry.target.dataset.type}
-                    var event = new CustomEvent('scrollPos', {detail: data})
-                    window.parent.document.dispatchEvent(event)
-                }
-        },
-        {
-            rootMargin: "-50% 0px"
-        });
-
-    var cursect = '';
-    var own_timer;
-    var loadedAll = false;
-
-
-    function initAll() {
-        $.each($('.slick-initialized'), function () {
-            $(this).slick("unslick");
-        })
-        startAll();
-
-        setTimeout(function () {
-            if ($('.ct-demonstration', window.parent.document).length > 0) {
-                $.each(parent.offsections, function (k, v) {
-                    $('.sm-edit[data-type="' + (v + 1) + '"]').toggleClass('sm-hidden', true);
-                })
-
-                if ($('[data-sm-text="ANKETA_ANSWER1"]').parents('.sm-edit').hasClass('sm-hidden')) {
-                    $('.sm-data__confirm-btn, .scrollto, [data-src="#sm-mod"], .sm-open-modal, .open-modal, #open-modal-form').toggleClass('sm-hidden', true);
-                    $('.sm-madewithlove').toggleClass('sm-shortmade', true);
-                }
-
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://wedwed.ru/sitemaker/js/js-scroll-animations.min.js';
-                $("body").append(script);
-                $('html').addClass('animating');
-                $('body').toggleClass('sm-editor_preview', false);
-                const jsScroll = jsScrollAnimations();
-                jsScroll.init();
-                setTimeout(function () {
-                    $('body').toggleClass('sm-loader', false);
-                }, 500);
-            } else {
-                $('body').toggleClass('sm-loader', false);
-            }
-
-            var parent2 = window.parent.document;
-            $(parent2).find('.ct-device_switcher').toggleClass('ct-hidden', false);
-
-            Fancybox.bind('[data-fancybox]', {
-                    touch: true,
-                    closeBtn: true,
-                    Thumbs: false,
-                    caption: false,
-                    autoScale: true,
-                    on: {
-                        "reveal": (fancybox) => {
-                            var slides = fancybox.carousel.slides;
-                            $.each(slides, function (k, v) {
-                                $(v.el).toggleClass('sm-grayscale', $(v.thumbEl).hasClass('sm-grayscale'))
-                            })
-                        },
-                    }
-                }
-            );
-        }, 500)
-        reObserv();
-    }
-
-    function ownSlick() {
-        if ($('.sm-own_wrapper-img img').length > 1) {
-            clearTimeout(own_timer);
-            own_timer = setTimeout(function () {
-                $('.sm-own_wrapper-img.slick-initialized').slick('unslick')
-                if ($('.sm-own_wrapper-img img').length > 1) {
-                    $('.sm-own_wrapper-img').slick({
-                        dots: false,
-                        infinite: true,
-                        slidesToShow: 1,
-                        adaptiveHeight: true,
-                        slidesToScroll: 1,
-                        prevArrow: "<div class='sm-sl-arrow sm-prev'></div>",
-                        nextArrow: "<div class='sm-sl-arrow sm-next'></div>",
-                    })
-                }
-            }, 500)
-        } else {
-            clearTimeout(own_timer);
-            own_timer = setTimeout(function () {
-                $('.sm-own_wrapper-img.slick-initialized').slick('unslick')
-            }, 500)
-        }
-    }
-
-    $(window).on('resize', function () {
-        if ($('.sm-own_wrapper-img img').length > 1) {
-            ownSlick();
-        }
-    })
-
-
-    function reObserv() {
-        osections = document.getElementsByClassName("sm-edit");
-        for (let i = 0; i < osections.length; i++) {
-            observer.observe(osections[i]);
-        }
-    }
-
-    // .....................................................................
-    // .....................................................................
-    // .....................................................................
-    // .....................................................................
-
 
     // 1. Получаем дату свадьбы
     const weddingDate = new Date(2025, 6, 18, 17, 0, 0); // 18 июля 2025, 17:00
@@ -1490,8 +1367,6 @@
     // Вызываем функцию сразу
     updateTimerDisplay();
 
-
-    // }
 </script>
 
 
