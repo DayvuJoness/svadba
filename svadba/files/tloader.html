@@ -1424,7 +1424,7 @@
 
 
     // 1. Получаем дату свадьбы
-    const weddingDate = new Date(2025, 6, 18); // Месяцы в JavaScript начинаются с 0 (6 - это июль)
+    const weddingDate = new Date(2025, 6, 18);
 
     // 2. Функция для расчета разницы во времени
     function getTimeRemaining() {
@@ -1432,7 +1432,7 @@
         const timeDiff = weddingDate.getTime() - now.getTime();
 
         if (timeDiff <= 0) {
-            return {days: 0, hours: 0, minutes: 0, seconds: 0}; // Если дата прошла
+            return {days: 0, hours: 0, minutes: 0, seconds: 0};
         }
 
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -1446,17 +1446,51 @@
     // 3. Функция для обновления HTML
     function updateTimerDisplay() {
         const time = getTimeRemaining();
-        document.getElementById('days').querySelector('.sm-timer-time_number-span').textContent = time.days;
-        document.getElementById('hours').querySelector('.sm-timer-time_number-span').textContent = time.hours;
-        document.getElementById('minutes').querySelector('.sm-timer-time_number-span').textContent = time.minutes;
-        document.getElementById('seconds').querySelector('.sm-timer-time_number-span').textContent = time.seconds;
+
+        // Обновляем ДНИ
+        const daysSpans = document.querySelectorAll('#days .sm-timer-time_number-span');
+        if (daysSpans.length > 0) {
+            daysSpans.forEach((span, index) => {
+                const digit = Math.floor(time.days / Math.pow(10, daysSpans.length - 1 - index)) % 10;
+                span.textContent = digit;
+            });
+        }
+
+        // Обновляем ЧАСЫ
+        const hoursSpans = document.querySelectorAll('#hours .sm-timer-time_number-span');
+        if (hoursSpans.length > 0) {
+            hoursSpans.forEach((span, index) => {
+                const digit = Math.floor(time.hours / Math.pow(10, hoursSpans.length - 1 - index)) % 10;
+                span.textContent = digit;
+            });
+        }
+
+        // Обновляем МИНУТЫ
+        const minutesSpans = document.querySelectorAll('#minutes .sm-timer-time_number-span');
+        if (minutesSpans.length > 0) {
+            minutesSpans.forEach((span, index) => {
+                const digit = Math.floor(time.minutes / Math.pow(10, minutesSpans.length - 1 - index)) % 10;
+                span.textContent = digit;
+            });
+        }
+
+        // Обновляем СЕКУНДЫ
+        const secondsSpans = document.querySelectorAll('#seconds .sm-timer-time_number-span');
+        if (secondsSpans.length > 0) {
+            secondsSpans.forEach((span, index) => {
+                const digit = Math.floor(time.seconds / Math.pow(10, secondsSpans.length - 1 - index)) % 10;
+                span.textContent = digit;
+            });
+        }
     }
 
-    // 4. Запускаем таймер (обновляем каждую секунду)
+
+    // 4. Запускаем таймер
     setInterval(updateTimerDisplay, 1000);
 
-    // Вызываем функцию сразу, чтобы отобразить значения при загрузке страницы
+    // Вызываем функцию сразу
     updateTimerDisplay();
+
 
     // }
 </script>
