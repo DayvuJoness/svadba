@@ -1424,7 +1424,7 @@
 
 
     // 1. Получаем дату свадьбы
-    const weddingDate = new Date(2025, 6, 18);
+    const weddingDate = new Date(2025, 6, 18); // 18 июля 2025 (Месяцы в JS начинаются с 0)
 
     // 2. Функция для расчета разницы во времени
     function getTimeRemaining() {
@@ -1435,10 +1435,10 @@
             return {days: 0, hours: 0, minutes: 0, seconds: 0};
         }
 
+        const seconds = Math.floor((timeDiff / 1000) % 60);
+        const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+        const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         return {days, hours, minutes, seconds};
     }
@@ -1483,7 +1483,6 @@
             });
         }
     }
-
 
     // 4. Запускаем таймер
     setInterval(updateTimerDisplay, 1000);
