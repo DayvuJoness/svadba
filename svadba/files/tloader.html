@@ -1417,7 +1417,46 @@
         }
     }
 
-    initAll();
+    // .....................................................................
+    // .....................................................................
+    // .....................................................................
+    // .....................................................................
+
+
+    // 1. Получаем дату свадьбы
+    const weddingDate = new Date(2025, 6, 18); // Месяцы в JavaScript начинаются с 0 (6 - это июль)
+
+    // 2. Функция для расчета разницы во времени
+    function getTimeRemaining() {
+        const now = new Date();
+        const timeDiff = weddingDate.getTime() - now.getTime();
+
+        if (timeDiff <= 0) {
+            return {days: 0, hours: 0, minutes: 0, seconds: 0}; // Если дата прошла
+        }
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        return {days, hours, minutes, seconds};
+    }
+
+    // 3. Функция для обновления HTML
+    function updateTimerDisplay() {
+        const time = getTimeRemaining();
+        document.getElementById('days').querySelector('.sm-timer-time_number-span').textContent = time.days;
+        document.getElementById('hours').querySelector('.sm-timer-time_number-span').textContent = time.hours;
+        document.getElementById('minutes').querySelector('.sm-timer-time_number-span').textContent = time.minutes;
+        document.getElementById('seconds').querySelector('.sm-timer-time_number-span').textContent = time.seconds;
+    }
+
+    // 4. Запускаем таймер (обновляем каждую секунду)
+    setInterval(updateTimerDisplay, 1000);
+
+    // Вызываем функцию сразу, чтобы отобразить значения при загрузке страницы
+    updateTimerDisplay();
 
     // }
 </script>
