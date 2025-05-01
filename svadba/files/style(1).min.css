@@ -1411,7 +1411,7 @@ a {
 }
 @media (max-width:500px) {
     .sm-questionnaire {
-        padding: 0 0 64px;
+        padding: 0 0 0 0;
     }
 }.sm-questionnaire__container {
      max-width: 1146px;
