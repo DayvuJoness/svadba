@@ -1276,7 +1276,8 @@ a {
      position: relative;
      z-index: 1;
  }
-.number-acrive:before {
+.number-acrive:before
+{
     content: "";
     position: absolute;
     left: -12px;
