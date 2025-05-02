@@ -1295,7 +1295,7 @@ a {
     overflow: hidden;
 }
 
-.sm-wishes__content .sm-wishes__content-item.slick-slide.slick-current
+.sm-wishes__content .sm-wishes__content-item.slick-slide
 {
     margin: 0 0 30px 0;
 }
