@@ -1294,6 +1294,11 @@ a {
     /*height: 300px;*/
     overflow: hidden;
 }
+
+.sm-wishes__content .sm-wishes__content-item.slick-slide.slick-current
+{
+    margin: 0 0 30px 0;
+}
 .sm-wishes_img {
     position: absolute;
     left: 0;
