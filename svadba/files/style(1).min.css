@@ -1331,7 +1331,7 @@ a {
 }
 @media (max-width:500px) {
     .sm-wishes__content {
-        padding: 64px 0 140px;
+        padding: 64px 0 0;
         gap: 32px;
     }
 }.sm-wishes__content-wrap {
